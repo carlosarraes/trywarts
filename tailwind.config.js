@@ -1,11 +1,5 @@
 module.exports = {
   darkMode: 'class',
-  purge: {
-    content: ['./*.html', './js/script.js'],
-    options: {
-      safelist: ['dark'],
-    },
-  },
   content: ['./*.html', './js/script.js'],
   theme: {
     extend: {

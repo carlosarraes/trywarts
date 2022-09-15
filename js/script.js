@@ -39,13 +39,13 @@ function handleChange() {
   counter = 500 - textArea.value.length;
   showCounter.innerText = `${counter} caracteres`;
 
-  if (counter <= 100 && !showCounter.classList.contains('text-red-500')) {
-    showCounter.classList.add('text-red-500');
-    showCounter.classList.add('dark:text-red-500');
-    showCounter.classList.toggle('font-bold');
-  } else if (counter > 100 && showCounter.classList.contains('text-red-500')) {
-    showCounter.classList.remove('text-red-500');
-    showCounter.classList.remove('dark:text-red-500');
+  if (counter <= 100) {
+    showCounter.classList.add('text-red-600');
+    showCounter.classList.add('dark:text-red-600');
+    showCounter.classList.add('font-bold');
+  } else if (counter > 100 && showCounter.classList.contains('text-red-600')) {
+    showCounter.classList.remove('text-red-600');
+    showCounter.classList.remove('dark:text-red-600');
     showCounter.classList.toggle('font-bold');
   }
 }
