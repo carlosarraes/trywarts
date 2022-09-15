@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,156 +9,262 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Trybewarts</title>
   </head>
-  <body>
-    <header>
-      <img
-        src="./images/trybewarts-header-logo.svg"
-        class="trybewarts-header-logo"
-        alt=""
-      />
-      <h1 id="trybewarts-header-title">Trybewarts</h1>
-      <form class="trybewarts-login">
-        <input id="email-input" type="email" name="email" placeholder="Email" />
-        <input
-          id="password-input"
-          type="password"
-          name="password"
-          placeholder="Senha"
-        />
-        <button id="signup-btn">Entrar</button>
-      </form>
+  <body class="bg-ghostwhite dark:bg-slate-600">
+    <header class="bg-strongOrange py-6 space-y-6 shadow-lg dark:bg-darkBrown">
+      <div
+        class="flex flex-col items-center space-y-6 max-w-xl md:flex-row md:space-y-0 md:mx-auto md:justify-between md:my-0"
+      >
+        <img src="./images/trybewarts-header-logo.svg" class="w-28" alt="" />
+        <h1 id="trybewarts-header-title" class="text-4xl text-ghostwhite pb-2">
+          Trybewarts
+        </h1>
+        <div
+          class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
+        >
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-orange-800 appearance-none cursor-pointer"
+          />
+          <label
+            for="toggle"
+            class="toggle-label block overflow-hidden h-6 rounded-full bg-orange-300 cursor-pointer"
+          ></label>
+        </div>
+      </div>
     </header>
-    <main>
+    <main
+      class="bg-ghostwhite justify-center items-center flex flex-col mt-6 min-w-xl mx-4 dark:bg-slate-600"
+    >
       <form id="evaluation-form">
         <section class="names-div">
-          <input type="text" id="input-name" placeholder="Nome" />
-          <input type="text" id="input-lastname" placeholder="Sobrenome" />
+          <input type="text" id="input-name" placeholder="Nome" class="input" />
+          <input
+            type="text"
+            id="input-lastname"
+            placeholder="Sobrenome"
+            class="input"
+          />
         </section>
         <section class="casas-div">
-          <input type="text" id="input-email" placeholder="Email" />
-          <select name="house" id="house">
+          <input
+            type="text"
+            id="input-email"
+            placeholder="Email"
+            class="input"
+          />
+
+          <select
+            name="house"
+            id="house"
+            class="w-full py-1 indent-1 rounded-md bg-ghostwhite border-strongOrange border text-darkBrown my-2"
+          >
+            <option value="" id="no-house" selected disabled>
+              Selecione sua casa
+            </option>
             <option value="Gitnória" id="gitnoria-house">Gitnória</option>
             <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
             <option value="Corvinode" id="corvinode-house">Corvinode</option>
             <option value="Pytherina" id="pytherina-house">Pytherina</option>
           </select>
         </section>
-        <section class="radio-div">
-          <label for="radio-div" id="label-family">Qual sua família?</label>
-          <input
-            type="radio"
-            name="family"
-            id="frontend"
-            value="Frontend"
-          /><label for="frontend">Frontend</label>
-          <input
-            type="radio"
-            name="family"
-            id="backend"
-            value="Backend"
-          /><label for="backend">Backend</label>
-          <input
-            type="radio"
-            name="family"
-            id="fullstack"
-            value="FullStack"
-          /><label for="fullstack">FullStack</label>
+        <section class="flex flex-col my-2">
+          <label for="radio-div" id="label-family" class="label"
+            >Qual sua família?</label
+          >
+          <div class="space-x-2 ml-2 text-darkBrown">
+            <input
+              type="radio"
+              name="family"
+              id="frontend"
+              value="Frontend"
+            /><label
+              for="frontend"
+              class="dark:text-ghostwhite dark:font-medium"
+              >Frontend</label
+            >
+            <input
+              type="radio"
+              name="family"
+              id="backend"
+              value="Backend"
+            /><label for="backend" class="dark:text-ghostwhite dark:font-medium"
+              >Backend</label
+            >
+            <input
+              type="radio"
+              name="family"
+              id="fullstack"
+              value="FullStack"
+            /><label
+              for="fullstack"
+              class="dark:text-ghostwhite dark:font-medium"
+              >FullStack</label
+            >
+          </div>
         </section>
         <section class="checkbox-div">
-          <label for="checkbox-div" id="label-content"
+          <label for="checkbox-div" id="label-content" class="label"
             >Qual conteúdo você está com mais vontade de aprender?</label
           >
-          <div class="subjects-div">
-            <div>
+          <div class="flex flex-col ml-2 my-2">
+            <div class="space-x-2">
               <input
                 type="checkbox"
                 name="subject"
                 class="subject"
                 value="HoFs"
-              /><label for="HoFs">HoFs</label>
+              /><label for="HoFs" class="dark:text-ghostwhite dark:font-medium"
+                >HoFs</label
+              >
             </div>
-            <div>
+            <div class="space-x-2">
               <input
                 type="checkbox"
                 name="subject"
                 class="subject"
                 value="Jest"
-              /><label for="Jest">Jest</label>
+              /><label for="Jest" class="dark:text-ghostwhite dark:font-medium"
+                >Jest</label
+              >
             </div>
-            <div>
+            <div class="space-x-2">
               <input
                 type="checkbox"
                 name="subject"
                 class="subject"
                 value="Promises"
-              /><label for="Promises">Promises</label>
+              /><label
+                for="Promises"
+                class="dark:text-ghostwhite dark:font-medium"
+                >Promises</label
+              >
             </div>
-            <div>
+            <div class="space-x-2">
               <input
                 type="checkbox"
                 name="subject"
                 class="subject"
                 value="React"
-              /><label for="React">React</label>
+              /><label for="React" class="dark:text-ghostwhite dark:font-medium"
+                >React</label
+              >
             </div>
-            <div>
+            <div class="space-x-2">
               <input
                 type="checkbox"
                 name="subject"
                 class="subject"
                 value="SQL"
-              /><label for="SQL">SQL</label>
+              /><label for="SQL" class="dark:text-ghostwhite dark:font-medium"
+                >SQL</label
+              >
             </div>
-            <div>
+            <div class="space-x-2">
               <input
                 type="checkbox"
                 name="subject"
                 class="subject"
                 value="Python"
-              /><label for="Python">Python</label>
+              /><label
+                for="Python"
+                class="dark:text-ghostwhite dark:font-medium"
+                >Python</label
+              >
             </div>
           </div>
         </section>
-        <section class="avaliacao-div">
-          <label for="avaliacao-div" id="label-rate">
+        <section class="avaliacao-div my-2">
+          <label for="avaliacao-div" id="label-rate" class="label">
             Como você avalia a Trybewarts?
           </label>
-          <div class="rate-div">
-            <input type="radio" name="rate" value="1" /><label for="1">1</label>
-            <input type="radio" name="rate" value="2" /><label for="2">2</label>
-            <input type="radio" name="rate" value="3" /><label for="3">3</label>
-            <input type="radio" name="rate" value="4" /><label for="4">4</label>
-            <input type="radio" name="rate" value="5" /><label for="5">5</label>
-            <input type="radio" name="rate" value="6" /><label for="6">6</label>
-            <input type="radio" name="rate" value="7" /><label for="7">7</label>
-            <input type="radio" name="rate" value="8" /><label for="8">8</label>
-            <input type="radio" name="rate" value="9" /><label for="9">9</label>
-            <input type="radio" name="rate" value="10" /><label for="10"
+          <div class="flex ml-2 mt-2 space-x-1">
+            <input type="radio" name="rate" value="1" /><label
+              for="1"
+              class="dark:text-ghostwhite"
+              >1</label
+            >
+            <input type="radio" name="rate" value="2" /><label
+              for="2"
+              class="dark:text-ghostwhite"
+              >2</label
+            >
+            <input type="radio" name="rate" value="3" /><label
+              for="3"
+              class="dark:text-ghostwhite"
+              >3</label
+            >
+            <input type="radio" name="rate" value="4" /><label
+              for="4"
+              class="dark:text-ghostwhite"
+              >4</label
+            >
+            <input type="radio" name="rate" value="5" /><label
+              for="5"
+              class="dark:text-ghostwhite"
+              >5</label
+            >
+            <input type="radio" name="rate" value="6" /><label
+              for="6"
+              class="dark:text-ghostwhite"
+              >6</label
+            >
+            <input type="radio" name="rate" value="7" /><label
+              for="7"
+              class="dark:text-ghostwhite"
+              >7</label
+            >
+            <input type="radio" name="rate" value="8" /><label
+              for="8"
+              class="dark:text-ghostwhite"
+              >8</label
+            >
+            <input type="radio" name="rate" value="9" /><label
+              for="9"
+              class="dark:text-ghostwhite"
+              >9</label
+            >
+            <input type="radio" name="rate" value="10" /><label
+              for="10"
+              class="dark:text-ghostwhite"
               >10</label
             >
           </div>
         </section>
-        <section class="textarea-div">
-          <label for="textarea" class="textarea">Deixe seu comentário:</label>
+        <section class="textarea-div my-2">
+          <label for="textarea" class="label">Deixe seu comentário:</label>
           <textarea
             name="textarea"
             id="textarea"
             cols="30"
             rows="10"
             maxlength="500"
+            class="w-full p-2 border border-strongOrange rounded-md mt-2"
           ></textarea>
-          <p id="counter"></p>
+          <p
+            id="counter"
+            class="text-sm text-orange-400 dark:text-ghostwhite"
+          ></p>
         </section>
-        <section class="concorda-div">
+        <section class="concorda-div space-x-2 ml-2 my-4">
           <input type="checkbox" name="agreement" id="agreement" /><label
             for="agreement"
             id="label-infos"
+            class="label"
             >Você concorda com o uso das informações acima?</label
           >
         </section>
-        <button type="submit" id="submit-btn" disabled>Enviar</button>
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full py-2 my-2 mb-4 bg-strongOrange rounded-lg shadow-lg hover:opacity-70 transition-all duration-150 text-ghostwhite font-bold dark:bg-darkBrown"
+          disabled
+        >
+          Enviar
+        </button>
       </form>
-      <section id="form-data" class="hidden">
+      <section id="form-data" class="hidden max-w-xl">
         <p>Nome: <span></span></p>
         <p>Email: <span></span></p>
         <p>Casa: <span></span></p>
@@ -170,10 +276,13 @@
       <img
         src="images/trybewarts-colored.svg"
         id="trybewarts-forms-logo"
+        class="hidden w-96 my-12"
         alt=""
       />
     </main>
-    <footer>
+    <footer
+      class="bg-strongOrange text-ghostwhite text-center py-2 italic dark:bg-darkBrown"
+    >
       <h4>Direitos reservados à Trybewarts©</h4>
     </footer>
   </body>
