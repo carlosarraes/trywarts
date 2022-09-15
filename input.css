@@ -16,6 +16,6 @@
   border-color: #0c0c0c;
 }
 .toggle-checkbox:checked + .toggle-label {
-  @apply: bg-gray-800;
-  background-color: #3d3d3d;
+  @apply: bg-slate-600;
+  background-color: rgb(71, 85, 105);
 }
