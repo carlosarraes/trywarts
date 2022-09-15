@@ -10,9 +10,9 @@
     <title>Trybewarts</title>
   </head>
   <body class="bg-ghostwhite dark:bg-slate-600">
-    <header class="bg-strongOrange py-6 space-y-6 shadow-lg dark:bg-darkBrown">
+    <header class="bg-softGreen py-6 space-y-6 shadow-lg dark:bg-darkBrown">
       <div
-        class="flex flex-col items-center space-y-6 max-w-xl md:flex-row md:space-y-0 md:mx-auto md:justify-between md:my-0"
+        class="flex flex-col items-center space-y-6 max-w-xl sm:flex-row md:space-y-0 sm:mx-auto sm:justify-evenly md:justify-between md:my-0"
       >
         <img src="./images/trybewarts-header-logo.svg" class="w-28" alt="" />
         <h1 id="trybewarts-header-title" class="text-4xl text-ghostwhite pb-2">
@@ -25,11 +25,11 @@
             type="checkbox"
             name="toggle"
             id="toggle"
-            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-orange-800 appearance-none cursor-pointer"
+            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-green-800 appearance-none cursor-pointer"
           />
           <label
             for="toggle"
-            class="toggle-label block overflow-hidden h-6 rounded-full bg-orange-300 cursor-pointer"
+            class="toggle-label block overflow-hidden h-6 rounded-full bg-green-300 cursor-pointer"
           ></label>
         </div>
       </div>
@@ -38,7 +38,7 @@
       class="bg-ghostwhite justify-center items-center flex flex-col mt-6 min-w-xl mx-4 dark:bg-slate-600"
     >
       <form id="evaluation-form">
-        <section class="names-div">
+        <section class="names-div md:flex md:-mb-3 md:gap-1">
           <input type="text" id="input-name" placeholder="Nome" class="input" />
           <input
             type="text"
@@ -47,18 +47,20 @@
             class="input"
           />
         </section>
-        <section class="casas-div">
+        <section
+          class="casas-div flex flex-col space-y-3 md:flex-row md:space-y-0 md:gap-1"
+        >
           <input
             type="text"
             id="input-email"
             placeholder="Email"
-            class="input"
+            class="input md:w-3/5"
           />
 
           <select
             name="house"
             id="house"
-            class="w-full py-1 indent-1 rounded-md bg-ghostwhite border-strongOrange border text-darkBrown my-2 dark:border-darkBrown"
+            class="w-full md:w-2/5 py-1 indent-1 rounded-md bg-ghostwhite border-softGreen border text-darkBrown my-2 self-center dark:border-darkBrown"
           >
             <option value="" id="no-house" selected disabled>
               Selecione sua casa
@@ -69,47 +71,57 @@
             <option value="Pytherina" id="pytherina-house">Pytherina</option>
           </select>
         </section>
-        <section class="flex flex-col my-2">
+        <section class="flex flex-col my-2 md:mt-0">
           <label for="radio-div" id="label-family" class="label"
             >Qual sua família?</label
           >
-          <div class="space-x-2 ml-2 text-darkBrown">
-            <input
-              type="radio"
-              name="family"
-              id="frontend"
-              value="Frontend"
-            /><label
-              for="frontend"
-              class="dark:text-ghostwhite dark:font-medium"
-              >Frontend</label
-            >
-            <input
-              type="radio"
-              name="family"
-              id="backend"
-              value="Backend"
-            /><label for="backend" class="dark:text-ghostwhite dark:font-medium"
-              >Backend</label
-            >
-            <input
-              type="radio"
-              name="family"
-              id="fullstack"
-              value="FullStack"
-            /><label
-              for="fullstack"
-              class="dark:text-ghostwhite dark:font-medium"
-              >FullStack</label
-            >
+          <div
+            class="ml-2 text-darkBrown md:space-x-0 md:flex md:justify-around"
+          >
+            <div class="space-x-2">
+              <input
+                type="radio"
+                name="family"
+                id="frontend"
+                value="Frontend"
+              /><label
+                for="frontend"
+                class="dark:text-ghostwhite dark:font-medium"
+                >Frontend</label
+              >
+            </div>
+            <div class="space-x-2">
+              <input
+                type="radio"
+                name="family"
+                id="backend"
+                value="Backend"
+              /><label
+                for="backend"
+                class="dark:text-ghostwhite dark:font-medium"
+                >Backend</label
+              >
+            </div>
+            <div class="space-x-2">
+              <input
+                type="radio"
+                name="family"
+                id="fullstack"
+                value="FullStack"
+              /><label
+                for="fullstack"
+                class="dark:text-ghostwhite dark:font-medium"
+                >FullStack</label
+              >
+            </div>
           </div>
         </section>
         <section class="checkbox-div">
           <label for="checkbox-div" id="label-content" class="label"
             >Qual conteúdo você está com mais vontade de aprender?</label
           >
-          <div class="flex flex-col ml-2 my-2">
-            <div class="space-x-2">
+          <div class="flex flex-col ml-2 md:ml-12 my-2">
+            <div class="space-x-2 md:space-x-3">
               <input
                 type="checkbox"
                 name="subject"
@@ -119,7 +131,7 @@
                 >HoFs</label
               >
             </div>
-            <div class="space-x-2">
+            <div class="space-x-2 md:space-x-3">
               <input
                 type="checkbox"
                 name="subject"
@@ -129,7 +141,7 @@
                 >Jest</label
               >
             </div>
-            <div class="space-x-2">
+            <div class="space-x-2 md:space-x-3">
               <input
                 type="checkbox"
                 name="subject"
@@ -141,7 +153,7 @@
                 >Promises</label
               >
             </div>
-            <div class="space-x-2">
+            <div class="space-x-2 md:space-x-3">
               <input
                 type="checkbox"
                 name="subject"
@@ -151,7 +163,7 @@
                 >React</label
               >
             </div>
-            <div class="space-x-2">
+            <div class="space-x-2 md:space-x-3">
               <input
                 type="checkbox"
                 name="subject"
@@ -161,7 +173,7 @@
                 >SQL</label
               >
             </div>
-            <div class="space-x-2">
+            <div class="space-x-2 md:space-x-3">
               <input
                 type="checkbox"
                 name="subject"
@@ -179,7 +191,9 @@
           <label for="avaliacao-div" id="label-rate" class="label">
             Como você avalia a Trybewarts?
           </label>
-          <div class="flex ml-2 mt-2 space-x-1">
+          <div
+            class="flex ml-2 mt-2 space-x-1 sm:justify-evenly md:justify-evenly"
+          >
             <input type="radio" name="rate" value="1" /><label
               for="1"
               class="dark:text-ghostwhite"
@@ -240,14 +254,14 @@
             cols="30"
             rows="10"
             maxlength="500"
-            class="w-full p-2 border border-strongOrange rounded-md mt-2 dark:border-darkBrown"
+            class="w-full p-2 border border-softGreen rounded-md mt-2 dark:border-darkBrown"
           ></textarea>
           <p
             id="counter"
-            class="text-sm text-orange-400 dark:text-ghostwhite"
+            class="text-sm text-softGreen opacity-70 dark:text-ghostwhite"
           ></p>
         </section>
-        <section class="concorda-div space-x-2 ml-2 my-4">
+        <section class="concorda-div space-x-2 ml-2 my-4 sm:text-center">
           <input type="checkbox" name="agreement" id="agreement" /><label
             for="agreement"
             id="label-infos"
@@ -258,7 +272,7 @@
         <button
           type="submit"
           id="submit-btn"
-          class="w-full py-2 my-2 mb-4 bg-strongOrange rounded-lg shadow-lg hover:opacity-70 transition-all duration-150 text-ghostwhite font-bold dark:bg-darkBrown"
+          class="w-full py-2 my-2 mb-4 bg-softGreen rounded-lg shadow-lg hover:opacity-70 transition-all duration-150 text-ghostwhite font-bold dark:bg-darkBrown"
           disabled
         >
           Enviar
@@ -281,7 +295,7 @@
       />
     </main>
     <footer
-      class="bg-strongOrange text-ghostwhite text-center py-2 italic dark:bg-darkBrown"
+      class="bg-softGreen text-ghostwhite text-center py-2 italic dark:bg-darkBrown"
     >
       <h4>Direitos reservados à Trybewarts©</h4>
     </footer>
