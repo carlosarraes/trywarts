@@ -4,7 +4,6 @@ const textArea = document.getElementById('textarea');
 const showCounter = document.getElementById('counter');
 const evaluationForm = document.getElementById('evaluation-form');
 const formData = document.getElementById('form-data');
-const imgForm = document.getElementById('trybewarts-forms-logo');
 let counter = 500;
 showCounter.innerText = `${counter} caracteres`;
 const getName = document.getElementById('input-name');
@@ -85,7 +84,7 @@ function handleSubmit(e) {
   e.preventDefault();
   evaluationForm.classList.toggle('hidden');
   formData.classList.toggle('hidden');
-  imgForm.classList.toggle('hidden');
+  formData.classList.toggle('flex');
   const data = getData();
   const getSpan = document.querySelectorAll('span');
   getSpan[0].innerText = data.name;

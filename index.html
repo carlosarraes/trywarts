@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Trybewarts</title>
   </head>
-  <body class="bg-ghostwhite dark:bg-slate-600">
+  <body class="bg-softGreen dark:bg-darkBrown">
     <header class="bg-softGreen py-6 space-y-6 shadow-lg dark:bg-darkBrown">
       <div
         class="flex flex-col items-center space-y-6 max-w-xl sm:flex-row md:space-y-0 sm:mx-auto sm:justify-evenly md:justify-between md:my-0"
@@ -35,7 +35,7 @@
       </div>
     </header>
     <main
-      class="bg-ghostwhite justify-center items-center flex flex-col mt-6 min-w-xl mx-4 dark:bg-slate-600"
+      class="bg-ghostwhite justify-center items-center flex flex-col pt-6 min-w-xl px-4 dark:bg-slate-600"
     >
       <form id="evaluation-form">
         <section class="names-div md:flex md:-mb-3 md:gap-1">
@@ -278,21 +278,28 @@
           Enviar
         </button>
       </form>
-      <section id="form-data" class="hidden max-w-xl">
-        <p>Nome: <span></span></p>
-        <p>Email: <span></span></p>
-        <p>Casa: <span></span></p>
-        <p>Família: <span></span></p>
-        <p>Matérias: <span></span></p>
-        <p>Avaliação: <span></span></p>
-        <p>Observações: <span></span></p>
+      <section
+        id="form-data"
+        class="hidden flex-col sm:flex-row sm:space-x-8 justify-baseline items-start"
+      >
+        <section class="max-w-xl dark:text-ghostwhite self-center">
+          <p class="font-bold">Nome: <span class="font-normal"></span></p>
+          <p class="font-bold">Email: <span class="font-normal"></span></p>
+          <p class="font-bold">Casa: <span class="font-normal"></span></p>
+          <p class="font-bold">Família: <span class="font-normal"></span></p>
+          <p class="font-bold">Matérias: <span class="font-normal"></span></p>
+          <p class="font-bold">Avaliação: <span class="font-normal"></span></p>
+          <p class="font-bold">
+            Observações: <span class="font-normal"></span>
+          </p>
+        </section>
+        <img
+          src="images/trybewarts-colored.svg"
+          id="trybewarts-forms-logo"
+          class="h-96"
+          alt=""
+        />
       </section>
-      <img
-        src="images/trybewarts-colored.svg"
-        id="trybewarts-forms-logo"
-        class="hidden w-96 my-12"
-        alt=""
-      />
     </main>
     <footer
       class="bg-softGreen text-ghostwhite text-center py-2 italic dark:bg-darkBrown"
