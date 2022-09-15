@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply w-full placeholder-darkBrown indent-3 focus:outline-none placeholder-opacity-50 border border-softGreen rounded-md border-opacity-50 py-1 my-2 dark:border-darkBrown;
+}
+
+.label {
+  @apply text-softGreen font-bold my-2 dark:text-ghostwhite;
+}
+
+.toggle-checkbox:checked {
+  @apply: right-0 border-gray-800;
+  right: 0;
+  border-color: #0c0c0c;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-gray-800;
+  background-color: #3d3d3d;
+}
