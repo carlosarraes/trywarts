@@ -631,64 +631,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
-.border-strongOrange {
-  --tw-border-opacity: 1;
-  border-color: rgb(244 93 72 / var(--tw-border-opacity));
-}
-
-.border-orange-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(234 88 12 / var(--tw-border-opacity));
-}
-
-.border-orange-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(253 186 116 / var(--tw-border-opacity));
-}
-
-.border-orange-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(124 45 18 / var(--tw-border-opacity));
-}
-
-.border-orange-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(194 65 12 / var(--tw-border-opacity));
-}
-
-.border-orange-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 115 22 / var(--tw-border-opacity));
-}
-
-.border-orange-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(254 215 170 / var(--tw-border-opacity));
-}
-
-.border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity));
-}
-
-.border-red-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(254 202 202 / var(--tw-border-opacity));
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
-.border-red-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(153 27 27 / var(--tw-border-opacity));
-}
-
 .border-orange-800 {
   --tw-border-opacity: 1;
   border-color: rgb(154 52 18 / var(--tw-border-opacity));
+}
+
+.border-strongOrange {
+  --tw-border-opacity: 1;
+  border-color: rgb(244 93 72 / var(--tw-border-opacity));
 }
 
 .bg-ghostwhite {
@@ -704,16 +654,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-orange-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
-}
-
-.bg-orange-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
 }
 
 .bg-orange-300 {
@@ -859,6 +799,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
+.dark .input {
+  --tw-border-opacity: 1;
+  border-color: rgb(35 35 35 / var(--tw-border-opacity));
+}
+
 .label {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -885,6 +830,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:opacity-70:hover {
   opacity: 0.7;
+}
+
+.dark .dark\:border-darkBrown {
+  --tw-border-opacity: 1;
+  border-color: rgb(35 35 35 / var(--tw-border-opacity));
 }
 
 .dark .dark\:bg-slate-600 {

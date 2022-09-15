@@ -14,6 +14,10 @@ const getHouse = document.getElementById('house');
 const getObservacao = document.getElementById('textarea');
 const toggle = document.getElementById('toggle');
 
+window.onload = function () {
+  toggle.checked = false;
+};
+
 function handleButton() {
   if (isAgreed.checked === true) {
     submitBtn.disabled = false;
