@@ -15,7 +15,17 @@ const getObservacao = document.getElementById('textarea');
 const toggle = document.getElementById('toggle');
 
 window.onload = function () {
-  toggle.checked = false;
+  if (
+    localStorage.getItem('dark') === null ||
+    localStorage.getItem('dark') === ''
+  ) {
+    toggle.checked = false;
+    localStorage.setItem('dark', '');
+    document.documentElement.classList.remove('dark');
+  } else if (localStorage.getItem('dark') === 'dark') {
+    toggle.checked = true;
+    document.documentElement.classList.add('dark');
+  }
 };
 
 function handleButton() {
@@ -89,6 +99,13 @@ function handleSubmit(e) {
 
 function handleDark() {
   document.documentElement.classList.toggle('dark');
+  if (toggle.checked) {
+    localStorage.setItem('dark', 'dark');
+    console.log(`entrou: ${toggle.checked}`);
+  } else {
+    localStorage.setItem('dark', '');
+    console.log(`saiu: ${toggle.checked}`);
+  }
 }
 
 textArea.addEventListener('keyup', handleChange);
