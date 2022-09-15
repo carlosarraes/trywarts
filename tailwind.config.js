@@ -1,5 +1,8 @@
 module.exports = {
   darkMode: 'class',
+  options: {
+    safelist: ['dark'],
+  },
   content: ['./*.html', './js/script.js'],
   theme: {
     extend: {
